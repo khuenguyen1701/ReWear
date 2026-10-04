@@ -1,0 +1,188 @@
+.profile-page {
+  min-height: 100vh;
+
+  padding: 100px 8%;
+
+  background-color: #ead1bb;
+  color: #4f5b2a;
+}
+
+
+/* HEADER */
+
+.profile-header {
+  max-width: 1050px;
+  margin: 0 auto 50px;
+}
+
+.profile-header > p:first-child {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.profile-header h1 {
+  margin: 10px 0;
+
+  font-family: Georgia, serif;
+  font-size: 55px;
+  font-weight: 500;
+}
+
+.profile-email {
+  color: #6c6c5a;
+}
+
+
+/* PROFILE OPTIONS */
+
+.profile-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+  max-width: 1050px;
+  margin: 0 auto 35px;
+}
+
+
+/* CARDS */
+
+.profile-card {
+  min-height: 280px;
+  padding: 35px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f5efe3;
+  color: #4f5b2a;
+
+  border: 1px solid #4f5b2a;
+  border-radius: 5px;
+
+  text-decoration: none;
+
+  transition: transform 0.2s ease;
+}
+
+/* .profile-card:hover {
+  transform: translateY(-5px);
+} */
+
+.profile-card > span:first-child {
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  opacity: 0.6;
+}
+
+.profile-card h2 {
+  margin: 10px 0 15px;
+
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.profile-card p {
+  max-width: 400px;
+
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  color: #6c6c5a;
+}
+
+
+/* SECOND CARD */
+
+.profile-card:nth-child(2) {
+  background-color: #4f5b2a;
+  color: #f5efe3;
+}
+
+.profile-card:nth-child(2) p {
+  color: #e5e1d5;
+}
+
+
+/* CARD BUTTONS */
+
+.card-button {
+  width: fit-content;
+
+  margin-top: auto;
+  padding: 10px 18px;
+
+  background-color: #4f5b2a;
+  color: #f5efe3;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+
+/* BUTTON ON GREEN CARD */
+
+.profile-card:nth-child(2) .card-button {
+  background-color: #f5efe3;
+  color: #4f5b2a;
+}
+
+
+/* LOG OUT */
+
+.logout-button {
+  display: block;
+
+  width: fit-content;
+  margin: 0 auto;
+
+  padding: 12px 25px;
+
+  background-color: #4f5b2a;
+  color: #f5efe3;
+
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  opacity: 0.9;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .profile-page {
+    padding: 70px 25px;
+  }
+
+  .profile-header h1 {
+    font-size: 42px;
+  }
+
+  .profile-options {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    min-height: 250px;
+  }
+
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+}

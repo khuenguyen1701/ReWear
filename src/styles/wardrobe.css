@@ -1,0 +1,95 @@
+.wardrobe-page {
+  min-height: 100vh;
+  padding: 60px 10%;
+
+  background-color: #ead1bb;
+  color: #4f5b2a;
+}
+
+.back-link {
+  color: #4f5b2a;
+  text-decoration: none;
+}
+
+.wardrobe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 40px 0;
+}
+
+.wardrobe-header h1 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+  font-size: 45px;
+}
+
+.wardrobe-header p {
+  color: #6c6c5a;
+}
+
+.add-button {
+  padding: 12px 20px;
+
+  background-color: #4f5b2a;
+  color: white;
+
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.wardrobe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.clothing-card {
+  padding: 15px;
+
+  background-color: #f5efe3;
+
+  border-radius: 8px;
+}
+
+.image-placeholder {
+  height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ddd5c7;
+
+  color: #888;
+
+  border-radius: 5px;
+}
+
+.clothing-card h3 {
+  margin: 15px 0 5px;
+
+  font-family: Georgia, serif;
+}
+
+.clothing-card p {
+  margin: 0;
+
+  color: #6c6c5a;
+
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+    color: black;
+}
