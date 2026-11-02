@@ -133,3 +133,64 @@ body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
 }
+
+
+/* Password requirements */
+.password-requirements {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #777;
+  text-align: left;
+  margin: 5px 0 15px;
+}
+
+/* OR divider */
+.signup-divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 18px 0;
+  color: #888;
+  font-size: 13px;
+}
+
+.signup-divider::before,
+.signup-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+/* Google sign-up button */
+.signup-form .google-signup-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.signup-form .google-signup-button:hover {
+  background: #f5f5f5;
+}
+
+.signup-form .google-signup-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signup-message {
+  color: #c0392b;
+  font-size: 13px;
+  margin-top: 12px;
+}

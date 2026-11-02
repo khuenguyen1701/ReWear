@@ -14,6 +14,9 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import LoginRequired from "./components/LoginRequired";
 import Wardrobe from "./components/Wardrobe";
 
+import AddClothing from "./components/AddClothing";
+import WardrobeAnalytics from "./components/WardrobeAnalytics";
+
 
 function Home() {
   return (
@@ -63,6 +66,23 @@ export default function App() {
       <ProtectedRoute>
         <Wardrobe />
       </ProtectedRoute>
+      }
+    />
+
+        <Route
+      path="/add-clothing"
+      element={
+        <ProtectedRoute>
+          <AddClothing />
+        </ProtectedRoute>
+      }
+    />
+        <Route
+      path="/wardrobe/analytics"
+      element={
+        <ProtectedRoute>
+          <WardrobeAnalytics />
+        </ProtectedRoute>
       }
     />
       </Routes>

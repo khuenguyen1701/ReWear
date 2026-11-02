@@ -1,0 +1,590 @@
+
+/* ====================================
+   REWEAR AI - ADD CLOTHING PAGE
+   ==================================== */
+
+.add-clothing-page {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 80px;
+  background: #ead1bb;
+  color: #4f5b2a;
+  font-family: Georgia, "Times New Roman", serif;
+  box-sizing: border-box;
+}
+
+/* ====================================
+   NAVBAR - MATCH HOMEPAGE
+   ==================================== */
+
+.add-clothing-page .upload-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 80px;
+  padding: 0 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: #f5efe3;
+  border: none;
+  box-sizing: border-box;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* REWEAR LOGO */
+
+.add-clothing-page .brand {
+  margin: 0;
+  color: #4f5b2a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* MY WARDROBE BUTTON */
+
+.add-clothing-page .upload-header button {
+  flex-shrink: 0;
+  min-width: 105px;
+  max-width: 100%;
+  padding: 10px 22px;
+
+  background: #4f5b2a;
+  color: #f5efe3;
+
+  border: none;
+  border-radius: 5px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.add-clothing-page .upload-header button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ====================================
+   MAIN CONTAINER
+   ==================================== */
+
+.add-clothing-page .upload-container {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+  padding: 45px 20px 70px;
+
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* ====================================
+   PAGE INTRO
+   ==================================== */
+
+.add-clothing-page .eyebrow {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #4f5b2a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.add-clothing-page .upload-container h1 {
+  margin: 0 0 10px;
+
+  color: #4f5b2a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+.add-clothing-page .subtitle {
+  margin: 0 0 30px;
+  color: #6c6c5a;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ====================================
+   FORM CARDS
+   ==================================== */
+
+.add-clothing-page .upload-card {
+  padding: 26px;
+  margin-bottom: 18px;
+
+  background: #f5efe3;
+  border: 1px solid #4f5b2a;
+  border-radius: 6px;
+
+  box-sizing: border-box;
+}
+
+.add-clothing-page .upload-card h3 {
+  margin: 0 0 20px;
+
+  color: #4f5b2a;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ====================================
+   IMAGE UPLOAD AREA
+   ==================================== */
+
+.add-clothing-page .image-upload-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 230px;
+  overflow: hidden;
+
+  background: #fffaf2;
+  border: 2px dashed #a6ad8b;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.add-clothing-page .image-upload-box:hover {
+  background: #f0e8da;
+  border-color: #4f5b2a;
+}
+
+.add-clothing-page .image-upload-box input {
+  display: none;
+}
+
+.add-clothing-page .image-upload-box img {
+  display: block;
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+/* ====================================
+   IMAGE PLACEHOLDER
+   ==================================== */
+
+.add-clothing-page .upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  padding: 25px;
+  text-align: center;
+}
+
+.add-clothing-page .upload-icon {
+  color: #4f5b2a;
+  font-size: 38px;
+}
+
+.add-clothing-page .upload-placeholder p {
+  color: #4f5b2a;
+  font-size: 14px;
+}
+
+.add-clothing-page .upload-placeholder small,
+.add-clothing-page .photo-hint {
+  color: #6c6c5a;
+  font-size: 12px;
+}
+
+.add-clothing-page .choose-photo {
+  display: inline-block;
+  padding: 10px 20px;
+
+  background: #4f5b2a;
+  color: #f5efe3;
+
+  border: 1px solid #4f5b2a;
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ====================================
+   FORM GRID
+   ==================================== */
+
+.add-clothing-page .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.add-clothing-page .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  color: #4f5b2a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.add-clothing-page .full-width {
+  grid-column: 1 / -1;
+}
+
+/* ====================================
+   DROPDOWNS, INPUTS AND NOTES
+   ==================================== */
+
+.add-clothing-page .form-field select,
+.add-clothing-page .form-field input,
+.add-clothing-page .form-field textarea {
+  display: block;
+  width: 100%;
+  padding: 11px 12px;
+
+  background: #fffaf2;
+  color: #4f5b2a;
+
+  border: 1px solid #b7bba4;
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.add-clothing-page .form-field select {
+  cursor: pointer;
+}
+
+.add-clothing-page .form-field textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.add-clothing-page .form-field select:focus,
+.add-clothing-page .form-field input:focus,
+.add-clothing-page .form-field textarea:focus {
+  outline: 2px solid #4f5b2a;
+  outline-offset: 2px;
+}
+
+.add-clothing-page .form-field small {
+  color: #6c6c5a;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* ====================================
+   ACTION BUTTONS
+   ==================================== */
+
+.add-clothing-page .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.add-clothing-page .form-actions button {
+  padding: 12px 22px;
+
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* CANCEL BUTTON */
+
+.add-clothing-page .cancel-button {
+  background: transparent;
+  color: #4f5b2a;
+  border: 1px solid #4f5b2a;
+}
+
+.add-clothing-page .cancel-button:hover {
+  background: #e8dfd1;
+}
+
+/* SAVE BUTTON */
+
+.add-clothing-page .save-button {
+  background: #4f5b2a;
+  color: #f5efe3;
+  border: 1px solid #4f5b2a;
+}
+
+.add-clothing-page .save-button:hover:not(:disabled) {
+  background: #3d4720;
+}
+
+.add-clothing-page .save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ====================================
+   ERROR MESSAGE
+   ==================================== */
+
+.add-clothing-page .upload-error {
+  padding: 12px 16px;
+  margin-bottom: 18px;
+
+  background: #fff0ee;
+  color: #a22e2e;
+
+  border: 1px solid #e6b5ac;
+  border-radius: 5px;
+
+  font-size: 13px;
+}
+
+/* ====================================
+   RESPONSIVE DESIGN
+   ==================================== */
+
+@media (max-width: 700px) {
+
+  .add-clothing-page {
+    padding-top: 70px;
+  }
+
+  .add-clothing-page .upload-header {
+    height: 70px;
+    padding: 0 20px;
+    gap: 12px;
+  }
+
+  .add-clothing-page .brand {
+    font-size: 23px;
+  }
+
+  .add-clothing-page .upload-header button {
+    min-width: 0;
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+
+  .add-clothing-page .upload-container {
+    padding: 35px 20px 60px;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .add-clothing-page .upload-container {
+    padding: 30px 18px 45px;
+  }
+
+  .add-clothing-page .upload-card {
+    padding: 20px;
+  }
+
+  .add-clothing-page .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .add-clothing-page .full-width {
+    grid-column: auto;
+  }
+
+  .add-clothing-page .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .add-clothing-page .form-actions button {
+    width: 100%;
+  }
+}
+
+.custom-option-input {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.custom-option-input input {
+  flex: 1;
+  min-width: 140px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.custom-option-input button {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* MULTI-SELECT DROPDOWNS */
+
+.multi-select-container {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.multi-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px;
+  border: 1px solid #b7b7a5;
+  border-radius: 8px;
+  background: #fffaf2;
+  color: #4b5b2b;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.multi-select-trigger span:first-child {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.multi-select-menu {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #c8c5b8;
+  border-radius: 10px;
+  background: #fffaf2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.multi-select-option {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px;
+  padding: 9px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.multi-select-option input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  margin: 0;
+  accent-color: #4b5b2b;
+}
+
+.multi-select-custom {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.multi-select-custom input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #c8c5b8;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.multi-select-custom button,
+.multi-select-done {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #4b5b2b;
+  color: white;
+  cursor: pointer;
+}
+
+.multi-select-done {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.multi-select-custom button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Preserve edit modal vertical layout */
+
+.edit-modal-form .edit-modal-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 18px;
+}
+
+.edit-modal-form .edit-modal-field > label,
+.edit-modal-form .edit-modal-field > span {
+  display: block;
+  color: #4b5b2b;
+  font-weight: 600;
+}
+
+.edit-modal-form .multi-select-trigger {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .multi-select-custom {
+    flex-wrap: wrap;
+  }
+}

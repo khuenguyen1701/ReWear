@@ -1,95 +1,714 @@
+
+/* WARDROBE LAYOUT FIX */
+
 .wardrobe-page {
+  width: 100%;
   min-height: 100vh;
-  padding: 60px 10%;
-
-  background-color: #ead1bb;
+  padding: 40px 6%;
+  background: #ead1bb;
   color: #4f5b2a;
-}
-
-.back-link {
-  color: #4f5b2a;
-  text-decoration: none;
-}
-
-.wardrobe-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin: 40px 0;
-}
-
-.wardrobe-header h1 {
-  margin: 0;
-
   font-family: Georgia, serif;
-  font-size: 45px;
 }
 
-.wardrobe-header p {
+.wardrobe-page .back-link {
+  display: inline-block;
+  margin-bottom: 35px;
+  padding: 10px 16px;
+  background: #f5efe3;
+  color: #4f5b2a;
+  border: 1px solid #4f5b2a;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.wardrobe-page .wardrobe-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0 auto 30px;
+  max-width: 1050px;
+}
+
+.wardrobe-page .wardrobe-header > div:first-child {
+  flex: 1 1 280px;
+}
+
+.wardrobe-page .wardrobe-header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.2;
+  font-family: Georgia, serif;
+  color: #4f5b2a;
+}
+
+.wardrobe-page .wardrobe-header p {
+  font-size: 14px;
   color: #6c6c5a;
 }
 
-.add-button {
-  padding: 12px 20px;
-
-  background-color: #4f5b2a;
-  color: white;
-
-  border: none;
+.wardrobe-page .add-button {
+  padding: 12px 18px;
+  background: #4f5b2a;
+  color: #f5efe3;
+  border: 1px solid #4f5b2a;
   border-radius: 5px;
-
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-weight: bold;
   cursor: pointer;
 }
 
-.wardrobe-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 25px;
+.wardrobe-page .add-button:hover {
+  background: #3d4720;
 }
 
-.clothing-card {
+.wardrobe-page .wardrobe-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1050px;
+  margin: 0 auto 30px;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.wardrobe-page .wardrobe-filters label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.wardrobe-page .wardrobe-filters select {
+  width: auto;
+  min-width: 150px;
+  padding: 10px 12px;
+  background: #f5efe3;
+  border: 1px solid #9ca482;
+  border-radius: 5px;
+  color: #4f5b2a;
+  font-family: Georgia, serif;
+  font-size: 13px;
+}
+
+/* ====================================
+   REWEAR AI - WARDROBE FIX
+   ==================================== */
+
+/* CLOTHING GRID */
+
+.wardrobe-page .wardrobe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+
+  width: 100%;
+  max-width: 1050px;
+  margin: 25px auto;
+}
+
+/* CLOTHING CARDS */
+
+.wardrobe-page .clothing-card {
+  min-width: 0;
   padding: 15px;
 
-  background-color: #f5efe3;
-
+  background: #f5efe3;
+  border: 1px solid #4f5b2a;
   border-radius: 8px;
+
+  overflow: hidden;
+  text-align: left;
 }
 
-.image-placeholder {
-  height: 220px;
+/* CLOTHING IMAGE */
+
+.wardrobe-page .clothing-image {
+  display: block;
+  width: 100%;
+  height: 240px;
+
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+/* CLICKABLE PREVIEW */
+
+.wardrobe-page .clothing-preview-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+
+  background: transparent;
+  color: inherit;
+  border: none;
+
+  font-family: Georgia, serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+.wardrobe-page .clothing-preview-button:hover img {
+  opacity: 0.85;
+}
+
+.wardrobe-page .clothing-card h3 {
+  margin: 10px 0 6px;
+  color: #4f5b2a;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.wardrobe-page .clothing-card p {
+  margin: 5px 0;
+  color: #6c6c5a;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.wardrobe-page .review-hint {
+  display: block;
+  margin-top: 12px;
+  color: #4f5b2a;
+  font-size: 12px;
+}
+
+/* DELETE BUTTON */
+
+.wardrobe-page .delete-button {
+  margin-top: 15px;
+  padding: 10px 16px;
+
+  background: #f5e0dc;
+  color: #9b3027;
+
+  border: 1px solid #d9a9a0;
+  border-radius: 5px;
+
+  font-family: Georgia, serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.wardrobe-page .delete-button:hover {
+  background: #ebccc5;
+}
+
+/* ====================================
+   EDIT MODAL OVERLAY
+   ==================================== */
+
+.wardrobe-page .edit-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-color: #ddd5c7;
-
-  color: #888;
-
-  border-radius: 5px;
+  padding: 24px;
+  background: rgba(20, 26, 15, 0.65);
 }
 
-.clothing-card h3 {
-  margin: 15px 0 5px;
+/* MODAL WINDOW */
 
+.wardrobe-page .edit-modal {
+  width: min(900px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+
+  padding: 30px;
+  background: #f5efe3;
+
+  border: 1px solid #4f5b2a;
+  border-radius: 10px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+/* MODAL HEADER */
+
+.wardrobe-page .edit-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.wardrobe-page .edit-modal-header h2 {
+  margin: 0 0 8px;
+  color: #4f5b2a;
   font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 500;
 }
 
-.clothing-card p {
-  margin: 0;
-
+.wardrobe-page .edit-modal-header p {
   color: #6c6c5a;
-
   font-size: 14px;
 }
 
-body {
-  margin: 0;
+.wardrobe-page .edit-modal-close {
+  background: transparent;
+  border: none;
+  color: #4f5b2a;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* MODAL CONTENT */
+
+.wardrobe-page .edit-modal-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+/* MODAL IMAGE */
+
+.wardrobe-page .edit-modal-image img {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+
+  background: #fffaf2;
+  border-radius: 6px;
+}
+
+/* EDIT FORM */
+
+.wardrobe-page .edit-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wardrobe-page .edit-modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+}
+
+.wardrobe-page .edit-modal-field span {
+  color: #4f5b2a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.wardrobe-page .edit-modal-field select,
+.wardrobe-page .edit-modal-field textarea {
+  display: block;
+  width: 100%;
+  padding: 11px 12px;
+
+  background: #fffaf2;
+  color: #4f5b2a;
+
+  border: 1px solid #b7bba4;
+  border-radius: 5px;
+
+  font-family: Georgia, serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.wardrobe-page .edit-modal-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* NOTES */
+
+.wardrobe-page .notes-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.wardrobe-page .notes-field textarea {
+  width: 100%;
+  min-height: 110px;
+  padding: 12px;
+
+  background: #fffaf2;
+  color: #4f5b2a;
+
+  border: 1px solid #b7bba4;
+  border-radius: 5px;
+
+  font-family: Georgia, serif;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.wardrobe-page .notes-field small {
+  color: #6c6c5a;
+  font-size: 12px;
+}
+
+/* MODAL BUTTONS */
+
+.wardrobe-page .edit-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.wardrobe-page .edit-cancel-button,
+.wardrobe-page .edit-save-button {
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.wardrobe-page .edit-cancel-button {
+  background: transparent;
+  color: #4f5b2a;
+  border: 1px solid #4f5b2a;
+}
+
+.wardrobe-page .edit-save-button {
+  background: #4f5b2a;
+  color: #f5efe3;
+  border: 1px solid #4f5b2a;
+}
+
+.wardrobe-page .edit-save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ====================================
+   RESPONSIVE
+   ==================================== */
+
+@media (max-width: 900px) {
+  .wardrobe-page .wardrobe-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .wardrobe-page .wardrobe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wardrobe-page .edit-modal-content {
+    grid-template-columns: 1fr;
+  }
+
+  .wardrobe-page .edit-modal {
+    padding: 20px;
+  }
+
+  .wardrobe-page .edit-modal-actions {
+    flex-direction: column;
+  }
+}
+
+
+/* ====================================
+   REWEAR AI - WARDROBE NAVBAR
+   ==================================== */
+
+.wardrobe-page {
+  padding-top: 125px;
+}
+
+/* NAVBAR */
+
+.wardrobe-page .wardrobe-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 80px;
+  padding: 0 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: #f5efe3;
+  border: none;
+  box-sizing: border-box;
+
   font-family: Georgia, "Times New Roman", serif;
 }
 
-h1 {
-    color: black;
+/* LOGO */
+
+.wardrobe-page .wardrobe-logo {
+  margin: 0;
+  color: #4f5b2a;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.wardrobe-page .wardrobe-logo:hover {
+  color: #4f5b2a;
+}
+
+/* MY PROFILE BUTTON */
+
+.wardrobe-page .wardrobe-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  min-width: 105px;
+  padding: 10px 22px;
+
+  background: #4f5b2a;
+  color: #f5efe3;
+
+  border: none;
+  border-radius: 5px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.wardrobe-page .wardrobe-nav-btn:hover {
+  color: #f5efe3;
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .wardrobe-page {
+    padding-top: 105px;
+  }
+
+  .wardrobe-page .wardrobe-navbar {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  .wardrobe-page .wardrobe-logo {
+    font-size: 23px;
+  }
+
+  .wardrobe-page .wardrobe-nav-btn {
+    min-width: 0;
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Fix custom dropdown layout in edit modal */
+
+.edit-modal-form .edit-modal-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.edit-modal-form .edit-modal-field > label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4b5b2b;
+}
+
+.edit-modal-form .edit-modal-field > select {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #c8c5b8;
+  border-radius: 8px;
+  background: #fffaf2;
+  color: #333;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+/* Custom option input */
+
+.edit-modal-form .custom-option-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.edit-modal-form .custom-option-input input {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px;
+  border: 1px solid #c8c5b8;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.edit-modal-form .custom-option-input button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* MULTI-SELECT DROPDOWNS */
+
+.multi-select-container {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.multi-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px;
+  border: 1px solid #b7b7a5;
+  border-radius: 8px;
+  background: #fffaf2;
+  color: #4b5b2b;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.multi-select-trigger span:first-child {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.multi-select-menu {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #c8c5b8;
+  border-radius: 10px;
+  background: #fffaf2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.multi-select-option {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px;
+  padding: 9px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.multi-select-option input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  margin: 0;
+  accent-color: #4b5b2b;
+}
+
+.multi-select-custom {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.multi-select-custom input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #c8c5b8;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.multi-select-custom button,
+.multi-select-done {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #4b5b2b;
+  color: white;
+  cursor: pointer;
+}
+
+.multi-select-done {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.multi-select-custom button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Preserve edit modal vertical layout */
+
+.edit-modal-form .edit-modal-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 18px;
+}
+
+.edit-modal-form .edit-modal-field > label,
+.edit-modal-form .edit-modal-field > span {
+  display: block;
+  color: #4b5b2b;
+  font-weight: 600;
+}
+
+.edit-modal-form .multi-select-trigger {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .multi-select-custom {
+    flex-wrap: wrap;
+  }
 }
